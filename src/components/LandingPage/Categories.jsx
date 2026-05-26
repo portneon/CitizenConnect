@@ -1,5 +1,13 @@
 import React from "react";
-import { Zap, Construction, Droplets, Trash2, Users, ShieldAlert, Siren } from "lucide-react";
+import {
+  Zap,
+  Construction,
+  Droplets,
+  Trash2,
+  Users,
+  ShieldAlert,
+  Siren,
+} from "lucide-react";
 
 export default function Categories() {
   const categories = [
@@ -9,11 +17,15 @@ export default function Categories() {
     },
     {
       title: "Roads & Infrastructure",
-      icon: <Construction className="w-8 h-8 text-[#0e0c17] mb-4" strokeWidth={1} />,
+      icon: (
+        <Construction className="w-8 h-8 text-[#0e0c17] mb-4" strokeWidth={1} />
+      ),
     },
     {
       title: "Water Supply",
-      icon: <Droplets className="w-8 h-8 text-[#0e0c17] mb-4" strokeWidth={1} />,
+      icon: (
+        <Droplets className="w-8 h-8 text-[#0e0c17] mb-4" strokeWidth={1} />
+      ),
     },
     {
       title: "Sanitation",
@@ -25,13 +37,15 @@ export default function Categories() {
     },
     {
       title: "Misbehavior / Corruption",
-      icon: <ShieldAlert className="w-8 h-8 text-[#0e0c17] mb-4" strokeWidth={1} />,
+      icon: (
+        <ShieldAlert className="w-8 h-8 text-[#0e0c17] mb-4" strokeWidth={1} />
+      ),
     },
     {
       title: "Emergency (Fire, Accident)",
       icon: <Siren className="w-8 h-8 text-red-700 mb-4" strokeWidth={1} />,
-      isEmergency: true
-    }
+      isEmergency: true,
+    },
   ];
 
   return (
@@ -42,18 +56,22 @@ export default function Categories() {
             What Can You Report?
           </h2>
           <p className="text-2xl text-[#0e0c17] max-w-4xl mx-auto leading-relaxed opacity-80">
-            Different departments handle different issues. Select the category that best matches your problem, and we'll route it to the right authority.
+            Different departments handle different issues. Select the category
+            that best matches your problem, and we'll route it to the right
+            authority.
           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {categories.map((cat, idx) => (
-            <div 
+            <div
               key={idx}
-              className={`flex flex-col items-center justify-center p-10 rounded-2xl border border-gray-200 transition-colors ${cat.isEmergency ? 'border-red-200 bg-red-50/30' : 'hover:bg-gray-50'}`}
+              className={`flex flex-col items-center justify-center p-10 rounded-2xl border border-gray-200 transition-colors ${cat.isEmergency ? "border-red-200 bg-red-50/30" : "hover:bg-gray-50"}`}
             >
               {cat.icon}
-              <h3 className={`text-xl ${cat.isEmergency ? 'text-red-800' : 'text-[#0e0c17]'}`}>
+              <h3
+                className={`text-xl ${cat.isEmergency ? "text-red-800" : "text-[#0e0c17]"}`}
+              >
                 {cat.title}
               </h3>
               {cat.isEmergency && (

@@ -26,7 +26,7 @@ function Hero() {
       </div>
 
       <div className="flex content-evenly gap-20 m-20 p-10 rounded-2xl">
-        <div className="flex font-serif text-3xl justify-center bg-blue-50 rounded-2xl p-10 ">
+        <div className="flex font-serif text-3xl justify-center bg-[#fdfdfd] rounded-2xl p-10 border border-gray-200 ">
           <p>
             Navigating government departments can be overwhelming. In India,
             multiple administrative levels handle various public services,
@@ -35,7 +35,7 @@ function Hero() {
           </p>
         </div>
 
-        <div className="flex font-serif text-3xl justify-center bg-blue-50 rounded-2xl p-10 ">
+        <div className="flex font-serif text-3xl justify-center bg-[#fdfdfd]  rounded-2xl p-10 border border-gray-200 ">
           <p>
             Our platform bridges this gap. It intelligently identifies the
             correct authority for your issue and introduces an automated
